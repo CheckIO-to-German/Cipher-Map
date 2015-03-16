@@ -1,0 +1,72 @@
+<p>
+    Помогите Софи написать дешифратор для паролей, которые Никола зашифровал с помощью
+    шифровальной решетки.
+    Шифрорешетка - это квадрат 4 на 4 с четырьмя вырезанными окошками.
+    Поместите решетку на листе бумаги такого же размера с буквами, выписываете
+    первые 4 символа, которые видно в окошках (см. рисунок).
+    Затем поверните решетку на 90 градусов по часовой стрелке.
+    Выпишите следующие символы и повторите поворот.
+    В итоге процедура повторяется 4 раза.
+    Таким образом сложно узнать пароль без специальной решетки.
+</p>
+
+<p class="for_info_only" style="text-align: center;">
+    <img src="{{ MEDIA }}cipher_map.png" alt="" width="600px"/></p>
+
+<p class="for_editor_only" style="text-align: center;">
+    <img width="380px" src="{{ MEDIA }}cipher_map.png" alt=""/></p>
+
+<p>
+    Напишите программу, которая поможет проводить данную процедуру.
+</p>
+
+<p>
+    Шифровальная решетка и зашифрованный пароль представлены, как массив строк.
+</p>
+
+<p><strong>Входные данные:</strong> Шифровальная решетка и зашифрованный пароль,
+    как список (list) строк.
+</p>
+
+<p><strong>Выходные данные:</strong> Пароль, как строка.</p>
+
+<div class="for_info_only">
+    <p><strong>Примеры:</strong></p>
+<pre class="brush: python">recall_password(
+    ('X...',
+     '..X.',
+     'X..X',
+     '....'),
+    ('itdf',
+     'gdce',
+     'aton',
+     'qrdi')) == 'icantforgetiddqd'
+
+recall_password(
+    ('....',
+     'X..X',
+     '.X..',
+     '...X'),
+    ('xhwc',
+     'rsqx',
+     'xqzz',
+     'fyzr')) == 'rxqrwsfzxqxzhczy'
+</pre>
+</div>
+
+<p class="for_info_only">
+    <strong>Как это используется: </strong>
+    Попрактикуйтесь работать с двумерными массивами.
+    Ну а также ознакомитесь с оригинальной системой шифрования.
+</p>
+
+
+<p>
+    <strong>Предусловия:</strong>
+    len(cipher_grille) == 4<br>
+    len(ciphered_password) == 4<br>
+    all(len(row) == 4 for row in ciphered_password)<br>
+    all(len(row) == 4 for row in cipher_grille)<br>
+    all(all(ch in string.ascii_lowercase for ch in row) for row in ciphered_password)<br>
+    all(all(ch == "X" or ch == "." for ch in row) for row in cipher_grille)<br>
+</p>
