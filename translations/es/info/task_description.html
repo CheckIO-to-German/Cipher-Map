@@ -1,0 +1,116 @@
+<div class="story" style="float: left; margin-top: -40px; margin-bottom: 0">
+    <img src="{{ MEDIA }}cipher_map_illustration.png">
+</div>
+<div class="story">
+    <p>"Nikola, A1213pokl, bAse730onE."</p>
+
+    <p>"S&iacute; Sof&iacute;a, &iquest;qu&eacute; es eso?"</p>
+
+    <p>"&iexcl;D&iacute;melo t&uacute;! Tu instrumento de tortura est&aacute; alterando mis circuitos con su
+       nuevo l&eacute;xico. No hay manera de que pueda recordar estas nuevas contrase&ntilde;as,
+       y esa cosa no acepta las que son sencillas y f&aacute;ciles."</p>
+
+    <p>"Oh, esas ser&iacute;an buenas contrase&ntilde;as, podr&iacute;as utilizarlas."</p>
+
+    <p>"&iquest;Por qu&eacute; no las usas t&uacute;?" Sof&iacute;a replic&oacute; casi hist&eacute;rica. "&iexcl;Yo ya las olvid&eacute;!
+      &iquest;Quieres que me quede fuera de mi propia casa por siempre? Tienes que idear
+      algo m&aacute;s sencillo, de forma que yo no tenga que mantener toda esa jerigonza
+      aleatoria en mi cabeza."  Sof&iacute;a rara vez act&uacute;a de manera exigente, pero esta
+      vez hab&iacute;a alcanzado su punto de agitaci&oacute;n.  El estr&eacute;s de los &uacute;ltimos d&iacute;as junto
+      con su agotamiento la hab&iacute;an llevado al l&iacute;mite.</p>
+
+    <p>"No te preocupes, me esperaba algo m&aacute;s f&aacute;cil de recordar &iquest;Por qu&eacute; no usas un
+      mapa de cifrado para tu contrase&ntilde;a? Con &eacute;l podemos codificar todas las contrase&ntilde;as
+      y dejarlas justo al lado de la puerta o en cualquier lugar especial que acordemos,
+      ya que solo podr&iacute;an ser decodificados usando el mapa, y este lo mantendr&iacute;amos con
+      nosotros en nuestro viaje"</p>
+
+    <p>"&iquest;As&iacute; que no necesitar&iacute;a recordar todas esas contrase&ntilde;as? &iquest;Todo lo que tendr&iacute;amos
+      que hacer es asegurarnos de no perder el mapa de cifrado?" -pregunt&oacute; Sof&iacute;a
+      con esperanza.</p>
+
+    <p>"Si, es correcto."</p>
+
+    <p>"Incre&iacute;ble. Mu&eacute;strame el mapa de cifrado y expl&iacute;came c&oacute;mo funciona todo una vez m&aacute;s."</p>
+</div>
+
+<p>
+  Ayuda a Sof&iacute;a a escribir un decodificador para las contrase&ntilde;as que Nikola codificar&aacute;
+  utilizando un mapa de cifrado (<em>cipher map</em>). Una reglilla de cifrado es un cuadrado
+  de papel de 4x4, con cuatro ventanas recortadas. Colocando dicha reglilla sobre una
+  hoja de papel del mismo tama&ntilde;o, el codificador escribe los primeros cuatro s&iacute;mbolos
+  de su contrase&ntilde;a dentro de las ventanas (ver fig. m&aacute;s bajo).  Enseguida, el codificador
+  gira la reglilla 90 grados hacia la derecha. Los s&iacute;mbolos escritos anteriormente quedan
+  ocultos por la reglilla, y nuevos espacios en blanco aparecen dentro de las ventanas.
+  El codificador escribe entonces los siguientes cuatro s&iacute;mbolos de la contrase&ntilde;a, y vuelve
+  a girar la reglilla 90 grados. Una vez m&aacute;s , procede a escribir cuatro s&iacute;mbolos y realiza
+  un &uacute;ltimo giro. Para concluir el codificado, se escriben los 4 s&iacute;mbolos restantes de la
+  contrase&ntilde;a en los espacios disponibles.
+</p>
+
+<p>Sin la misma reglilla de cifrado, es dif&iacute;cil discernir la contrase&ntilde;a de la cuadricula
+  resultante que se compone de 16 s&iacute;mbolos. Por este motivo, el codificador puede estar
+  tranquilo ya que ning&uacute;n v&aacute;ndalo obtendr&aacute; f&aacute;cilmente el acceso a la puerta cerrada.</p>
+
+<p class="for_info_only" style="text-align: center;">
+    <img src="{{ MEDIA }}cipher_map.png" alt="" width="600px"/></p>
+
+<p class="for_editor_only" style="text-align: center;">
+    <img width="380px" src="{{ MEDIA }}cipher_map.png" alt=""/></p>
+
+<p>Escribe un m&oacute;dulo que permita a los robots recordar f&aacute;cilmente sus contrase&ntilde;as
+  cuando regresen a casa. </p>
+
+<p>
+  La reglilla de cifrado y la contrase&ntilde;a cifrada se representan
+  como una matriz (tuplas) de cadenas (<em>str</em>).
+</p>
+
+<p><strong>Datos de Entrada:</strong> Una reglilla de cifrado y una contrase&ntilde;a cifrada,
+  como tuplas de cadenas (<em>str</em>).
+</p>
+
+<p><strong>Salida:</strong> La contrase&ntilde;a, como una cadena (<em>str</em>.</p>
+
+<div class="for_info_only">
+    <p><strong>Ejemplo:</strong></p>
+<pre class="brush: python">recall_password(
+    ('X...',
+     '..X.',
+     'X..X',
+     '....'),
+    ('itdf',
+     'gdce',
+     'aton',
+     'qrdi')) == 'icantforgetiddqd'
+
+recall_password(
+    ('....',
+     'X..X',
+     '.X..',
+     '...X'),
+    ('xhwc',
+     'rsqx',
+     'xqzz',
+     'fyzr')) == 'rxqrwsfzxqxzhczy'
+</pre>
+</div>
+
+<p class="for_info_only">
+    <strong>&iquest;C&oacute;mo se usa?:</strong>
+    Aqu&iacute; podr&aacute;s aprender c&oacute;mo trabajar con matrices 2D. Tambi&eacute;n aprender&aacute;s sobre las
+    antiguas reglilla de cifrado, una t&eacute;cnica de codificar mensajes que ha sido
+    utilizada durante medio milenio. La primera descripci&oacute;n conocida de la rejilla
+    de cifrado viene del matem&aacute;tico italiano Girolamo Cardano en 1550.
+</p>
+
+
+<p>
+    <strong>Condiciones:</strong>
+    len(cipher_grille) == 4<br>
+    len(ciphered_password) == 4<br>
+    all(len(row) == 4 for row in ciphered_password)<br>
+    all(len(row) == 4 for row in cipher_grille)<br>
+    all(all(ch in string.ascii_lowercase for ch in row) for row in ciphered_password)<br>
+    all(all(ch == "X" or ch == "." for ch in row) for row in cipher_grille)<br>
+</p>
