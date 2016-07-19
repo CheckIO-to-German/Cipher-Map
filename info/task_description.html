@@ -1,6 +1,5 @@
-<div class="story" style="float: left; margin-top: -40px; margin-bottom: 0">
-    <img src="{{ MEDIA }}cipher_map_illustration.png">
-</div>
+<img class="for_info_only half" style="float: left" src="{{ MEDIA }}cipher_map_illustration.png">
+
 <div class="story">
     <p>"Nikola, A1213pokl, bAse730onE."</p>
 
@@ -47,10 +46,9 @@
 </p>
 
 <p class="for_info_only" style="text-align: center;">
-    <img src="{{ MEDIA }}cipher_map.png" alt="" width="600px"/></p>
+    <img src="{{ MEDIA }}cipher_map.png" style="max-height: 350px" />
+</p>
 
-<p class="for_editor_only" style="text-align: center;">
-    <img width="380px" src="{{ MEDIA }}cipher_map.png" alt=""/></p>
 
 <p>Write a module that enables the robots to easily recall their passwords through codes when they return home.</p>
 
@@ -65,7 +63,28 @@
 
 <div class="for_info_only">
     <p><strong>Example:</strong></p>
-<pre class="brush: python">recall_password(
+<pre class="brush: python">{% if interpreter.slug == "js-node" %}
+recallPassword(
+    ['X...',
+     '..X.',
+     'X..X',
+     '....'],
+    ['itdf',
+     'gdce',
+     'aton',
+     'qrdi']) == 'icantforgetiddqd'
+
+recallPassword(
+    ['....',
+     'X..X',
+     '.X..',
+     '...X'],
+    ['xhwc',
+     'rsqx',
+     'xqzz',
+     'fyzr']) == 'rxqrwsfzxqxzhczy'
+{% else %}
+recall_password(
     ('X...',
      '..X.',
      'X..X',
@@ -84,7 +103,7 @@ recall_password(
      'rsqx',
      'xqzz',
      'fyzr')) == 'rxqrwsfzxqxzhczy'
-</pre>
+{% endif %}</pre>
 </div>
 
 <p class="for_info_only">
