@@ -77,6 +77,7 @@ requirejs(['ext_editor_io', 'jquery_190', 'raphael_210'],
         }
 
         var io = new extIO({
+            animationTemplateName: 'template_animation',
             functions: {
                 js: 'absoluteSorting',
                 python: 'checkio'
