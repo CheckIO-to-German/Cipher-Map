@@ -81,7 +81,7 @@ requirejs(['ext_editor_io', 'jquery_190', 'raphael_210'],
                 js: 'absoluteSorting',
                 python: 'checkio'
             },
-            animation: function($expl, data){
+            animation: function($explanation, data){
                 var checkioInput = data.in;
                 var grille = convertStringsTo2D(checkioInput[0]);
                 var cpassword = convertStringsTo2D(checkioInput[1]);
