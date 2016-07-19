@@ -77,6 +77,7 @@ requirejs(['ext_editor_io', 'jquery_190', 'raphael_210'],
         }
 
         var io = new extIO({
+            multipleArguments: true,
             animationTemplateName: 'animation',
             functions: {
                 js: 'absoluteSorting',
