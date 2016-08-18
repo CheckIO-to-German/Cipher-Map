@@ -80,7 +80,7 @@ requirejs(['ext_editor_io', 'jquery_190', 'raphael_210'],
             multipleArguments: true,
             animationTemplateName: 'animation',
             functions: {
-                js: 'absoluteSorting',
+                js: 'recallPassword',
                 python: 'checkio'
             },
             animation: function($explanation, data){
